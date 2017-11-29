@@ -27,10 +27,5 @@ pipeline {
         sh './jenkins/scripts/kill.sh'
       }
     }
-    stage('zzz') {
-      steps {
-        build(propagate: true, job: 'zzz', quietPeriod: 10, wait: true)
-      }
-    }
   }
 }
